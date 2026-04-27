@@ -1,0 +1,548 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>La Ramadita | Restaurante Peruano</title>
+        <!-- Google Fonts + Font Awesome -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <!-- CSS externo -->
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+
+    <header>
+        <div class="contenedor header-flex">
+            <div class="logo">
+                <h1>La Ramadita <span>✦ Donde se come como en casa ✦</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="#menu-dia">Menú del día</a>
+                <a href="#galeria">Galería</a>
+                <a href="#ubicacion">Ubicación</a>
+                <a href="#" id="btnReservasNav">Reservas</a>
+                <a href="#" id="btnPedidosNav">Pedidos</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="contenedor">
+            <h2>Sabores que cuentan historias</h2>
+            <p>Ceviche, lomo saltado, ají de gallina y más… auténtica cocina peruana con ingredientes frescos y amor por la tradición.</p>
+            <div class="hero-buttons">
+                <button class="btn-hero" id="btnReservasHero"><i class="fas fa-calendar-alt"></i> Reservar Mesa</button>
+                <button class="btn-hero btn-outline" id="btnPedidosHero"><i class="fas fa-motorcycle"></i> Pedir a Domicilio</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- ========== MENÚ DEL DÍA ========== -->
+        <section id="menu-dia" class="seccion">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">🍽️ Menú del Día</h2>
+        <div class="menu-grid">
+            <div class="card-menu">
+                <img src="ceviche.jfif" alt="Ceviche Clásico">
+                <h3>Ceviche Clásico</h3>
+                <p>Pescado fresco del día, leche de tigre, camote, cancha y choclo.</p>
+                <span class="precio">S/ 32.90</span>
+                <button class="btn-agregar-carrito" data-nombre="Ceviche Clásico" data-precio="32.90">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+            <div class="card-menu">
+                <img src="lomo.jfif" alt="Lomo Saltado">
+                <h3>Lomo Saltado</h3>
+                <p>Lomo fino, cebolla, tomate, papas fritas, arroz y ají especial.</p>
+                <span class="precio">S/ 35.00</span>
+                <button class="btn-agregar-carrito" data-nombre="Lomo Saltado" data-precio="35.00">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+            <div class="card-menu">
+                <img src="aji.jfif" alt="Ají de Gallina">
+                <h3>Ají de Gallina</h3>
+                <p>Pechuga deshilachada en crema de ají amarillo, papa y arroz.</p>
+                <span class="precio">S/ 22.00</span>
+                <button class="btn-agregar-carrito" data-nombre="Ají de Gallina" data-precio="22.00">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+            <div class="card-menu">
+                <img src="suspiro.jfif" alt="Suspiro a la Limeña">
+                <h3>Suspiro a la Limeña</h3>
+                <p>Postre tradicional: manjar blanco y merengue de vino oporto.</p>
+                <span class="precio">S/ 15.00</span>
+                <button class="btn-agregar-carrito" data-nombre="Suspiro a la Limeña" data-precio="15.00">
+                    <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- ========== GALERÍA DE PLATOS Y AMBIENTE ========== -->
+        <section id="galeria" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">📸 Galería | Platos & Ambiente</h2>
+                <div class="galeria-grid">
+                    <div class="galeria-item">
+                        <img src="fondo.jfif" alt="Ambiente restaurante peruano">
+                        <p>Ambiente cálido y acogedor</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="causa.jfif" alt="Causa limeña">
+                        <p>Causa Limeña</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="pisco.jfif" alt="Pisco sour">
+                        <p>Pisco Sour & Barra tradicional</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="arroz.jpg" alt="Arroz con pollo">
+                        <p>Arroz con Pollo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== UBICACIÓN Y HORARIOS ========== -->
+        <section id="ubicacion" class="seccion">
+            <div class="contenedor">
+                <h2 class="titulo-seccion">📍 Ubicación y Horarios</h2>
+                <div class="info-doble">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Encuéntranos</h3>
+                        <p>Av. 15 de Julio altura del mercado Santa rosa <br>Lima - Perú</p>
+                        <p style="margin-top: 12px;"><i class="fas fa-phone-alt"></i> +51 960 166 606</p>
+                        <p><i class="fab fa-whatsapp"></i> +51 960 166 606</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horarios de atención</h3>
+                        <div class="horario-item"><span>Lun - Jue</span><span>10:00 am - 6:30 pm</span></div>
+                        <div class="horario-item"><span>Vie - Sáb</span><span>10:00 am - 6:00 am</span></div>
+                        <div class="horario-item"><span>Domingo</span><span>11:00 am - 5:00 pm</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor">
+            <p><i class="fas fa-drumstick-bite"></i> La Ramadita - Tradición y sabor peruano <i class="fas fa-heart" style="color:#f6a35c;"></i></p>
+            <p style="margin-top: 0.8rem; font-size: 0.85rem;">Cocina que honra el maíz, la papa y el ají. Reservas y pedidos, siempre con amor.</p>
+
+            <div style="margin: 20px 0;">
+            <img src="EPFKU7.jpg" alt="Código QR" style="width: 120px; height: auto;">
+            <p style="font-size: 0.8rem;">Escanea para más información</p>
+        </div>
+            
+            <!-- ===== REDES SOCIALES ===== -->
+            <div class="redes-sociales">
+                <a href="https://web.facebook.com/LaRamaditaNaturalSlimPremiun/" target="_blank" class="social-icon" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" target="_blank" class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" target="_blank" class="social-icon" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            
+            <p style="margin-top: 1rem;">© 2025 La Ramadita - Hecho con pasión</p>
+        </div>
+    </footer>
+
+    <!-- ========== CARRITO DE COMPRAS ========== -->
+<div class="carrito-toggle" id="carritoToggle">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="carrito-count" id="carritoCount">0</span>
+</div>
+
+<div class="overlay-carrito" id="overlayCarrito"></div>
+
+<div class="carrito-modal" id="carritoModal">
+    <div class="carrito-header">
+        <h3><i class="fas fa-shopping-cart"></i> Mi Pedido</h3>
+        <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
+    </div>
+    <div class="carrito-body" id="carritoBody">
+        <div class="carrito-vacio">
+            <i class="fas fa-shopping-basket" style="font-size: 48px; margin-bottom: 10px;"></i>
+            <p>Tu carrito está vacío</p>
+            <p style="font-size: 14px;">Agrega algunos platos del menú</p>
+        </div>
+    </div>
+    <div class="carrito-footer" id="carritoFooter" style="display: none;">
+        <div class="carrito-total">
+            <span>Total:</span>
+            <span id="carritoTotal">S/ 0.00</span>
+        </div>
+        <button class="btn-pedir-carrito" id="btnPedirCarrito">
+            <i class="fas fa-check-circle"></i> Confirmar Pedido
+        </button>
+    </div>
+</div>
+
+    <!-- ========== MODAL RESERVAS ========== -->
+    <div id="modalReservas" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2><i class="fas fa-calendar-alt"></i> Reservar Mesa</h2>
+                <span class="cerrar-modal" id="cerrarReservas">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form action="https://formsubmit.co/jhan15913@gmail.com" method="POST" class="formulario-modal">
+                    <input type="hidden" name="_subject" value="NUEVA RESERVA - La Ramadita">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://formsubmit.co/gracias">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nombre completo</label>
+                        <input type="text" name="Nombre" placeholder="Ej: Ana Lucía Quispe" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone-alt"></i> Teléfono / WhatsApp</label>
+                        <input type="tel" name="Telefono" placeholder="+51 987 654 321" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-calendar-day"></i> Fecha</label>
+                        <input type="date" name="Fecha" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-clock"></i> Hora</label>
+                        <input type="time" name="Hora" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-users"></i> Nº de comensales</label>
+                        <select name="Comensales" required>
+                            <option value="1">1 persona</option>
+                            <option value="2">2 personas</option>
+                            <option value="3">3 personas</option>
+                            <option value="4" selected>4 personas</option>
+                            <option value="5">5 personas</option>
+                            <option value="6+">6 o más</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-comment"></i> Solicitud especial</label>
+                        <textarea name="Comentarios" rows="2" placeholder="Alergias, celebración, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn-modal"><i class="fas fa-check-circle"></i> Confirmar Reserva</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MODAL PEDIDOS A DOMICILIO ========== -->
+    <div id="modalPedidos" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-header">
+                <h2><i class="fas fa-motorcycle"></i> Pedido a Domicilio</h2>
+                <span class="cerrar-modal" id="cerrarPedidos">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form action="https://formsubmit.co/jhan15913@gmail.com" method="POST" class="formulario-modal">
+                    <input type="hidden" name="_subject" value="NUEVO PEDIDO DOMICILIO - La Ramadita">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://formsubmit.co/gracias">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Nombre completo</label>
+                        <input type="text" name="Nombre_pedido" placeholder="Ej: Roberto Ccasa" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt"></i> Dirección de entrega</label>
+                        <input type="text" name="Direccion" placeholder="Calle, número, referencia" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-phone-alt"></i> Teléfono / WhatsApp</label>
+                        <input type="tel" name="Telefono_pedido" placeholder="+51 987 654 321" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-utensils"></i> ¿Qué deseas ordenar?</label>
+                        <textarea name="Pedido_detalle" rows="3" placeholder="Ej: 1 Lomo saltado, 2 ceviches, 1 suspiro" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-clock"></i> Horario preferido</label>
+                        <select name="Horario_entrega">
+                            <option>Inmediato (30-45 min)</option>
+                            <option>Agendar para más tarde</option>
+                            <option>13:00 - 14:30 hrs</option>
+                            <option>19:00 - 20:30 hrs</option>
+                        </select>
+                    </div>
+                    <div class="info-extra-modal">
+                        <p><i class="fas fa-truck"></i> Zonas de reparto: Miraflores, San Isidro, Barranco, Surco, La Molina</p>
+                        <p><i class="fas fa-dollar-sign"></i> Pedido mínimo S/ 35 | Envío gratis > S/ 69</p>
+                    </div>
+                    <button type="submit" class="btn-modal"><i class="fas fa-paper-plane"></i> Enviar pedido</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Elementos del DOM
+        const modalReservas = document.getElementById('modalReservas');
+        const modalPedidos = document.getElementById('modalPedidos');
+        
+        const btnReservasHero = document.getElementById('btnReservasHero');
+        const btnPedidosHero = document.getElementById('btnPedidosHero');
+        const btnReservasNav = document.getElementById('btnReservasNav');
+        const btnPedidosNav = document.getElementById('btnPedidosNav');
+        
+        const cerrarReservas = document.getElementById('cerrarReservas');
+        const cerrarPedidos = document.getElementById('cerrarPedidos');
+
+        // Función para abrir modal
+        function abrirModal(modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Función para cerrar modal
+        function cerrarModal(modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Event listeners para abrir
+        btnReservasHero.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirModal(modalReservas);
+        });
+        
+        btnPedidosHero.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirModal(modalPedidos);
+        });
+        
+        btnReservasNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirModal(modalReservas);
+        });
+        
+        btnPedidosNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirModal(modalPedidos);
+        });
+
+        // Event listeners para cerrar
+        cerrarReservas.addEventListener('click', () => cerrarModal(modalReservas));
+        cerrarPedidos.addEventListener('click', () => cerrarModal(modalPedidos));
+
+        // Cerrar al hacer clic fuera del modal
+        window.addEventListener('click', (e) => {
+            if (e.target === modalReservas) cerrarModal(modalReservas);
+            if (e.target === modalPedidos) cerrarModal(modalPedidos);
+        });
+
+        // Cerrar con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (modalReservas.style.display === 'flex') cerrarModal(modalReservas);
+                if (modalPedidos.style.display === 'flex') cerrarModal(modalPedidos);
+            }
+        });
+
+        // ========== CARRITO DE COMPRAS ==========
+let carrito = [];
+
+// Cargar carrito guardado
+function cargarCarrito() {
+    const guardado = localStorage.getItem('carritoLaRamadita');
+    if (guardado) {
+        carrito = JSON.parse(guardado);
+        actualizarCarrito();
+    }
+}
+
+// Guardar carrito
+function guardarCarrito() {
+    localStorage.setItem('carritoLaRamadita', JSON.stringify(carrito));
+}
+
+// Agregar producto al carrito
+function agregarAlCarrito(nombre, precio) {
+    const existente = carrito.find(item => item.nombre === nombre);
+    if (existente) {
+        existente.cantidad++;
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: parseFloat(precio),
+            cantidad: 1
+        });
+    }
+    guardarCarrito();
+    actualizarCarrito();
+    mostrarNotificacion(`${nombre} agregado al carrito`);
+}
+
+// Actualizar vista del carrito
+function actualizarCarrito() {
+    const carritoBody = document.getElementById('carritoBody');
+    const carritoFooter = document.getElementById('carritoFooter');
+    const carritoCount = document.getElementById('carritoCount');
+    
+    const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    const totalPrecio = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+    
+    carritoCount.textContent = totalItems;
+    
+    if (carrito.length === 0) {
+        carritoBody.innerHTML = `
+            <div class="carrito-vacio">
+                <i class="fas fa-shopping-basket" style="font-size: 48px; margin-bottom: 10px;"></i>
+                <p>Tu carrito está vacío</p>
+                <p style="font-size: 14px;">Agrega algunos platos del menú</p>
+            </div>
+        `;
+        carritoFooter.style.display = 'none';
+        return;
+    }
+    
+    carritoFooter.style.display = 'block';
+    document.getElementById('carritoTotal').innerHTML = `S/ ${totalPrecio.toFixed(2)}`;
+    
+    carritoBody.innerHTML = carrito.map((item, index) => `
+        <div class="carrito-item">
+            <div class="carrito-item-info">
+                <div class="carrito-item-nombre">${item.nombre}</div>
+                <div class="carrito-item-precio">S/ ${item.precio.toFixed(2)}</div>
+            </div>
+            <div class="carrito-item-cantidad">
+                <button onclick="cambiarCantidad(${index}, -1)">-</button>
+                <span>${item.cantidad}</span>
+                <button onclick="cambiarCantidad(${index}, 1)">+</button>
+            </div>
+            <div class="carrito-item-total">S/ ${(item.precio * item.cantidad).toFixed(2)}</div>
+            <div class="eliminar-item" onclick="eliminarDelCarrito(${index})">
+                <i class="fas fa-trash"></i>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Cambiar cantidad
+function cambiarCantidad(index, cambio) {
+    const item = carrito[index];
+    item.cantidad += cambio;
+    if (item.cantidad <= 0) {
+        carrito.splice(index, 1);
+    }
+    guardarCarrito();
+    actualizarCarrito();
+}
+
+// Eliminar del carrito
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    guardarCarrito();
+    actualizarCarrito();
+}
+
+// Mostrar notificación
+function mostrarNotificacion(mensaje) {
+    const notificacion = document.createElement('div');
+    notificacion.textContent = mensaje;
+    notificacion.style.cssText = `
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        background: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        z-index: 1002;
+        animation: fadeInOut 2s ease;
+    `;
+    document.body.appendChild(notificacion);
+    setTimeout(() => notificacion.remove(), 2000);
+}
+
+// Abrir/cerrar carrito
+function abrirCarrito() {
+    document.getElementById('carritoModal').classList.add('abierto');
+    document.getElementById('overlayCarrito').classList.add('visible');
+}
+
+function cerrarCarrito() {
+    document.getElementById('carritoModal').classList.remove('abierto');
+    document.getElementById('overlayCarrito').classList.remove('visible');
+}
+
+// Confirmar pedido y enviar a WhatsApp
+function confirmarPedido() {
+    if (carrito.length === 0) {
+        mostrarNotificacion('Agrega productos al carrito primero');
+        return;
+    }
+    
+    const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+    let mensaje = "🍽️ *NUEVO PEDIDO - La Ramadita* 🍽️%0A%0A";
+    mensaje += "*Mi pedido:*%0A";
+    
+    carrito.forEach(item => {
+        mensaje += `• ${item.cantidad} x ${item.nombre} - S/ ${(item.precio * item.cantidad).toFixed(2)}%0A`;
+    });
+    
+    mensaje += `%0A📊 *Total: S/ ${total.toFixed(2)}*%0A%0A`;
+    mensaje += "📍 *Dirección:* %0A";
+    mensaje += "📞 *Teléfono:* %0A";
+    mensaje += "_Por favor confirme su pedido y dirección_";
+    
+    const numeroWhatsApp = "51960166606";
+    const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    window.open(url, '_blank');
+    
+    // Limpiar carrito después de enviar
+    carrito = [];
+    guardarCarrito();
+    actualizarCarrito();
+    cerrarCarrito();
+    mostrarNotificacion('Pedido enviado a WhatsApp');
+}
+
+// Event listeners
+document.getElementById('carritoToggle').addEventListener('click', abrirCarrito);
+document.getElementById('cerrarCarrito').addEventListener('click', cerrarCarrito);
+document.getElementById('overlayCarrito').addEventListener('click', cerrarCarrito);
+document.getElementById('btnPedirCarrito').addEventListener('click', confirmarPedido);
+
+// Agregar event listeners a botones "Agregar al carrito"
+document.querySelectorAll('.btn-agregar-carrito').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const nombre = btn.getAttribute('data-nombre');
+        const precio = btn.getAttribute('data-precio');
+        agregarAlCarrito(nombre, precio);
+    });
+});
+
+// Inicializar carrito
+cargarCarrito();
+
+// Animación CSS
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeInOut {
+        0% { opacity: 0; transform: translateY(20px); }
+        15% { opacity: 1; transform: translateY(0); }
+        85% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-20px); }
+    }
+`;
+document.head.appendChild(style);
+        
+    </script>
+
+    
+
+    </body>
+    </html>
