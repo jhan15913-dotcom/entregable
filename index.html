@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ramadita | Restaurante Peruano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+    <div class="contenedor header-flex">
+        <div class="logo">
+            <h1>La Ramadita <span>✦ Donde se come como en casa ✦</span></h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#menu-dia">Menú del día</a>
+            <a href="#galeria">Galería</a>
+            <a href="#ubicacion">Ubicación</a>
+            <button id="btn-carrito-header">
+                <i class="fas fa-shopping-basket"></i>
+                Mi pedido
+                <span id="badge-carrito">0</span>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+    <div class="contenedor">
+        <h2>Sabores que cuentan historias</h2>
+        <p>Ceviche, lomo saltado, ají de gallina y más… auténtica cocina peruana con ingredientes frescos y amor por la tradición.</p>
+        <div id="banner-dia">
+            <span class="dot"></span>
+            <span id="texto-dia-activo">Cargando menú...</span>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== MENÚ DEL DÍA ===================== -->
+<section id="menu-dia" class="seccion">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">🍽️ Menú del Día</h2>
+        <p class="subtitulo-seccion">Haz clic en los platos disponibles para armar tu pedido</p>
+
+        <!-- Tabs entradas / segundos -->
+        <div class="tabs-categoria">
+            <button class="tab-btn activo" data-tab="entradas">
+                <i class="fas fa-bowl-food"></i> Entradas
+            </button>
+            <button class="tab-btn" data-tab="segundos">
+                <i class="fas fa-utensils"></i> Segundos
+            </button>
+        </div>
+
+        <!-- Contenedor dinámico: el JS renderiza las cards aquí -->
+        <div id="seccion-entradas" class="menu-seccion visible">
+            <div class="menu-grid" id="grid-entradas"></div>
+        </div>
+        <div id="seccion-segundos" class="menu-seccion">
+            <div class="menu-grid" id="grid-segundos"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== GALERÍA ===================== -->
+<section id="galeria" class="seccion">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">📸 Galería | Platos & Ambiente</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item">
+                <img src="fondo.jfif" alt="Ambiente restaurante peruano" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80'">
+                <p>Ambiente cálido y acogedor</p>
+            </div>
+            <div class="galeria-item">
+                <img src="causa.jfif" alt="Causa limeña" onerror="this.src='https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80'">
+                <p>Causa Limeña</p>
+            </div>
+            <div class="galeria-item">
+                <img src="pisco.jfif" alt="Pisco sour" onerror="this.src='https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&q=80'">
+                <p>Pisco Sour & Barra tradicional</p>
+            </div>
+            <div class="galeria-item">
+                <img src="arroz.jpg" alt="Arroz con pollo" onerror="this.src='https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80'">
+                <p>Arroz con Pollo</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== UBICACIÓN ===================== -->
+<section id="ubicacion" class="seccion">
+    <div class="contenedor">
+        <h2 class="titulo-seccion">📍 Ubicación y Horarios</h2>
+        <div class="info-doble">
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Encuéntranos</h3>
+                <p>Av. 15 de Julio, altura del Mercado Santa Rosa<br>Lima – Perú</p>
+                <p style="margin-top:12px"><i class="fas fa-phone-alt"></i> +51 960 166 606</p>
+                <p><i class="fab fa-whatsapp"></i> +51 960 166 606</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Horarios de atención</h3>
+                <div class="horario-item"><span>Lun – Jue</span><span>10:00 am – 6:30 pm</span></div>
+                <div class="horario-item"><span>Vie – Sáb</span><span>10:00 am – 6:00 pm</span></div>
+                <div class="horario-item"><span>Domingo</span><span>11:00 am – 5:00 pm</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+    <div class="contenedor">
+        <p><i class="fas fa-drumstick-bite"></i> La Ramadita – Tradición y sabor peruano <i class="fas fa-heart" style="color:#f6a35c"></i></p>
+        <p style="margin-top:0.7rem;font-size:0.84rem">Cocina que honra el maíz, la papa y el ají. Pedidos con amor.</p>
+        <div class="redes-sociales">
+            <a href="https://web.facebook.com/LaRamaditaNaturalSlimPremiun/" target="_blank" class="social-icon" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="social-icon" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <p style="margin-top:1rem;font-size:0.8rem">© 2025 La Ramadita – Hecho con pasión</p>
+    </div>
+</footer>
+
+<!-- ===================== OVERLAY + DRAWER CARRITO ===================== -->
+<div class="overlay-carrito" id="overlay-carrito"></div>
+<aside class="drawer-carrito" id="drawer-carrito">
+    <div class="drawer-header">
+        <h2><i class="fas fa-shopping-basket"></i> Mi Pedido</h2>
+        <button class="btn-cerrar-drawer" id="btn-cerrar-drawer">&times;</button>
+    </div>
+    <div class="drawer-body" id="drawer-body">
+        <div id="carrito-vacio">
+            <i class="fas fa-utensils"></i>
+            <p>Tu pedido está vacío.<br>Agrega platos del menú del día.</p>
+        </div>
+        <div id="lista-carrito"></div>
+    </div>
+    <div class="drawer-footer" id="drawer-footer" style="display:none">
+        <div class="resumen-precios" id="resumen-precios"></div>
+        <button class="btn-checkout" id="btn-ir-checkout">
+            <i class="fas fa-check-circle"></i> Confirmar Pedido
+        </button>
+    </div>
+</aside>
+
+<!-- ===================== MODAL CHECKOUT ===================== -->
+<div class="modal" id="modal-checkout">
+    <div class="modal-contenido">
+        <div class="modal-header">
+            <h2><i class="fab fa-whatsapp"></i> Finalizar Pedido</h2>
+            <button class="btn-cerrar-modal" id="btn-cerrar-checkout">&times;</button>
+        </div>
+        <div class="modal-body">
+            <!-- Banner de instrucción de pago -->
+            <div class="banner-pago">
+                <strong><i class="fas fa-info-circle"></i> Instrucciones de Pago</strong>
+                Realiza tu pago por <strong>Yape / Plin</strong> o transferencia al número del restaurante e introduce tus datos.
+                Al finalizar, deberás <strong>enviar la captura de pantalla de tu comprobante</strong> por el chat de WhatsApp que se abrirá a continuación.
+            </div>
+
+            <!-- Resumen del pedido -->
+            <div class="resumen-modal">
+                <h4><i class="fas fa-receipt"></i> Resumen de tu pedido</h4>
+                <ul id="resumen-modal-lista"></ul>
+                <p class="total-modal" id="resumen-modal-total"></p>
+            </div>
+
+            <!-- Formulario -->
+            <div class="form-group">
+                <label><i class="fas fa-user"></i> Nombre completo</label>
+                <input type="text" id="input-nombre" placeholder="Ej: Ana Lucía Quispe" required>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-map-marker-alt"></i> Dirección de entrega completa</label>
+                <textarea id="input-direccion" rows="2" placeholder="Calle, número, referencia..." required></textarea>
+            </div>
+
+            <button class="btn-confirmar" id="btn-confirmar-wa">
+                <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+/* ============================================================
+   1. BASE DE DATOS DEL CATÁLOGO POR DÍA
+   ============================================================ */
+const CATALOGO = {
+    lunes: {
+        entradas: ['Caldo de Gallina', 'Huancaína'],
+        segundos: [
+            'Lentejas con Pescado',
+            'Estofado de Pollo',
+            'Ají de Gallina',
+            'Tallarín con Chanfainita',
+            'Pollo Frito con Papas Fritas'
+        ]
+    },
+    martes: {
+        entradas: ['Sopa de Morón', 'Sopa de Casa', 'Huancaína'],
+        segundos: [
+            'Frejoles con Seco de Pollo',
+            'Frejoles con Pescado',
+            'Escabeche de Pollo',
+            'Adobo de Chancho',
+            'Pollo Frito con Papas'
+        ]
+    },
+    miercoles: {
+        entradas: ['Sopa de Casa', 'Ocopa'],
+        segundos: [
+            'Pollo al Horno con Puré',
+            'Alverjita Verde con Pescado Frito',
+            'Tallarín con Cau Cau',
+            'Tallarín con Pollo',
+            'Pollo Frito con Papas'
+        ]
+    },
+    jueves: {
+        entradas: ['Sopa de Casa', 'Huancaína'],
+        segundos: [
+            'Pollo con Maní',
+            'Frejoles Castilla con Pescado Frito',
+            'Pollo al Vino',
+            'Chicharrón Colorado',
+            'Pollo Frito con Papas',
+            'Milanesa con Papas'
+        ]
+    },
+    viernes: {
+        entradas: ['Huancaína', 'Aguadito'],
+        segundos: [
+            'Tallarín Verde con Pollo Frito',
+            'Seco de Pollo',
+            'Guiso de Trigo',
+            'Garbanzo con Pescado',
+            'Pollo Frito con Papas'
+        ]
+    },
+    sabado: {
+        entradas: ['Sopa de Casa', 'Huancaína'],
+        segundos: [
+            'Carapulcra con Sopa Seca de Pollo y Chancho',
+            'Ensalada Rusa con Pollo al Horno',
+            'Pollo Frito con Papas',
+            'Frejoles con Seco'
+        ]
+    },
+    domingo: {
+        entradas: ['Ceviche', 'Huancaína', 'Sopa de Trigo', 'Sopa de Casa'],
+        segundos: [
+            'Tallarín con Pollo',
+            'Arroz con Pollo',
+            'Ensalada Rusa con Pollo al Horno',
+            'Seco de Cordero y Pollo con Frejoles',
+            'Pollo Frito con Papas'
+        ]
+    }
+};
+
+// Guarniciones generales para todos los segundos
+const GUARNICIONES_GENERALES = [
+    '(Sin guarnición adicional)',
+    'Ensalada Rusa',
+    'Frejoles',
+    'Garbanzos',
+    'Frejoles Castilla',
+    'Lentejas',
+    'Alverjita Verde'
+];
+
+// Caso especial Carapulcra
+const GUARNICIONES_CARAPULCRA = ['Arroz', 'Sopa Seca'];
+
+// Precios
+const PRECIO_MENU    = 11.00;
+const PRECIO_SEGUNDO = 10.00;
+const PRECIO_ENTRADA =  4.00;
+
+/* ============================================================
+   2. DETECCIÓN DEL DÍA
+   ============================================================ */
+const DIA_MAP = ['domingo','lunes','martes','miercoles','jueves','viernes','sabado'];
+const DIA_LABEL = {
+    lunes:     'Lunes',
+    martes:    'Martes',
+    miercoles: 'Miércoles',
+    jueves:    'Jueves',
+    viernes:   'Viernes',
+    sabado:    'Sábado',
+    domingo:   'Domingo'
+};
+
+const diaIndex  = new Date().getDay();       // 0=dom … 6=sáb
+const diaActual = DIA_MAP[diaIndex];         // 'lunes', 'martes', etc.
+
+/* ============================================================
+   3. CARRITO (estado en memoria)
+   ============================================================ */
+let carrito = [];   // [{ id, tipo, nombre, guarnicion }]
+let idCounter = 0;
+
+function calcularResumen() {
+    const entradas = carrito.filter(i => i.tipo === 'entrada').length;
+    const segundos = carrito.filter(i => i.tipo === 'segundo').length;
+    const combos   = Math.min(entradas, segundos);
+    const excE     = entradas - combos;
+    const excS     = segundos - combos;
+
+    const total = combos * PRECIO_MENU + excE * PRECIO_ENTRADA + excS * PRECIO_SEGUNDO;
+    return { entradas, segundos, combos, excE, excS, total };
+}
+
+/* ============================================================
+   4. RENDER DE CARDS
+   ============================================================ */
+function esCarapulcra(nombre) {
+    return nombre.toLowerCase().includes('carapulcra');
+}
+
+function crearCardEntrada(nombre, activa) {
+    const card = document.createElement('div');
+    card.className = 'card-menu' + (activa ? '' : ' inactiva');
+    card.dataset.tipo = 'entrada';
+    card.dataset.nombre = nombre;
+
+    card.innerHTML = `
+        <span class="card-badge badge-entrada">🍵 Entrada</span>
+        <h3>${nombre}</h3>
+        <div class="card-footer">
+            <span class="precio-tag">S/. ${PRECIO_ENTRADA.toFixed(2)} (sola)</span>
+            ${activa
+                ? `<button class="btn-agregar" data-tipo="entrada" data-nombre="${nombre}">
+                       <i class="fas fa-plus"></i> Agregar
+                   </button>`
+                : `<span class="estado-inactivo">🚫 No disponible hoy</span>`
+            }
+        </div>
+    `;
+    return card;
+}
+
+function crearCardSegundo(nombre, activa) {
+    const card = document.createElement('div');
+    card.className = 'card-menu' + (activa ? '' : ' inactiva');
+    card.dataset.tipo = 'segundo';
+    card.dataset.nombre = nombre;
+
+    const opciones = esCarapulcra(nombre) ? GUARNICIONES_CARAPULCRA : GUARNICIONES_GENERALES;
+    const selectId = 'guarnicion-' + nombre.replace(/\s+/g,'_').toLowerCase();
+
+    const selectHTML = `
+        <div class="guarnicion-wrap">
+            <label for="${selectId}"><i class="fas fa-leaf"></i> Guarnición</label>
+            <select class="guarnicion-select" id="${selectId}">
+                ${opciones.map(g => `<option value="${g}">${g}</option>`).join('')}
+            </select>
+        </div>
+    `;
+
+    card.innerHTML = `
+        <span class="card-badge badge-segundo">🍽️ Segundo</span>
+        <h3>${nombre}</h3>
+        ${activa ? selectHTML : ''}
+        <div class="card-footer">
+            <span class="precio-tag">S/. ${PRECIO_SEGUNDO.toFixed(2)}</span>
+            ${activa
+                ? `<button class="btn-agregar" data-tipo="segundo" data-nombre="${nombre}" data-select="${selectId}">
+                       <i class="fas fa-plus"></i> Agregar
+                   </button>`
+                : `<span class="estado-inactivo">🚫 No disponible hoy</span>`
+            }
+        </div>
+    `;
+    return card;
+}
+
+function renderizarMenus() {
+    const gridE = document.getElementById('grid-entradas');
+    const gridS = document.getElementById('grid-segundos');
+    gridE.innerHTML = '';
+    gridS.innerHTML = '';
+
+    // Renderizar todos los días, marcando solo el activo
+    Object.keys(CATALOGO).forEach(dia => {
+        const activa = (dia === diaActual);
+        CATALOGO[dia].entradas.forEach(p => gridE.appendChild(crearCardEntrada(p, activa)));
+        CATALOGO[dia].segundos.forEach(p => gridS.appendChild(crearCardSegundo(p, activa)));
+    });
+
+    // Actualizar banner
+    document.getElementById('texto-dia-activo').textContent =
+        `Menú activo hoy: ${DIA_LABEL[diaActual]}`;
+
+    // Adjuntar eventos a botones agregar
+    document.querySelectorAll('.btn-agregar').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tipo   = btn.dataset.tipo;
+            const nombre = btn.dataset.nombre;
+            let guarnicion = '';
+            if (tipo === 'segundo') {
+                const sel = document.getElementById(btn.dataset.select);
+                guarnicion = sel ? sel.value : '';
+            }
+            agregarAlCarrito(tipo, nombre, guarnicion);
+        });
+    });
+}
+
+/* ============================================================
+   5. LÓGICA DEL CARRITO
+   ============================================================ */
+function agregarAlCarrito(tipo, nombre, guarnicion) {
+    carrito.push({ id: ++idCounter, tipo, nombre, guarnicion });
+    actualizarUI();
+    abrirDrawer();
+}
+
+function quitarDelCarrito(id) {
+    carrito = carrito.filter(i => i.id !== id);
+    actualizarUI();
+}
+
+function actualizarUI() {
+    const total = carrito.length;
+    document.getElementById('badge-carrito').textContent = total;
+
+    const listaEl   = document.getElementById('lista-carrito');
+    const vaciEl    = document.getElementById('carrito-vacio');
+    const footerEl  = document.getElementById('drawer-footer');
+    const resumenEl = document.getElementById('resumen-precios');
+
+    if (total === 0) {
+        vaciEl.style.display = 'block';
+        listaEl.innerHTML = '';
+        footerEl.style.display = 'none';
+        return;
+    }
+
+    vaciEl.style.display  = 'none';
+    footerEl.style.display = 'block';
+
+    // Render items
+    listaEl.innerHTML = carrito.map(item => `
+        <div class="carrito-item">
+            <div class="carrito-item-info">
+                <span class="carrito-item-tipo ${item.tipo === 'entrada' ? 'tipo-entrada' : 'tipo-segundo'}">
+                    ${item.tipo === 'entrada' ? '🍵 Entrada' : '🍽️ Segundo'}
+                </span>
+                <div class="carrito-item-nombre">${item.nombre}</div>
+                ${item.guarnicion && item.guarnicion !== '(Sin guarnición adicional)'
+                    ? `<div class="carrito-item-guarnicion">+ ${item.guarnicion}</div>`
+                    : ''}
+            </div>
+            <button class="btn-quitar" onclick="quitarDelCarrito(${item.id})" title="Quitar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `).join('');
+
+    // Resumen precios
+    const { combos, excE, excS, total: monto } = calcularResumen();
+    let html = '';
+    if (combos > 0)
+        html += `<div class="resumen-linea"><span>${combos}x Menú Completo</span><span>S/. ${(combos * PRECIO_MENU).toFixed(2)}</span></div>`;
+    if (excE > 0)
+        html += `<div class="resumen-linea"><span>${excE}x Entrada Sola</span><span>S/. ${(excE * PRECIO_ENTRADA).toFixed(2)}</span></div>`;
+    if (excS > 0)
+        html += `<div class="resumen-linea"><span>${excS}x Segundo Solo</span><span>S/. ${(excS * PRECIO_SEGUNDO).toFixed(2)}</span></div>`;
+    html += `<div class="resumen-linea total"><span>TOTAL</span><span>S/. ${monto.toFixed(2)}</span></div>`;
+    resumenEl.innerHTML = html;
+}
+
+/* ============================================================
+   6. DRAWER: abrir / cerrar
+   ============================================================ */
+function abrirDrawer() {
+    document.getElementById('drawer-carrito').classList.add('abierto');
+    document.getElementById('overlay-carrito').classList.add('abierto');
+    document.body.style.overflow = 'hidden';
+}
+function cerrarDrawer() {
+    document.getElementById('drawer-carrito').classList.remove('abierto');
+    document.getElementById('overlay-carrito').classList.remove('abierto');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('btn-cerrar-drawer').addEventListener('click', cerrarDrawer);
+document.getElementById('overlay-carrito').addEventListener('click', cerrarDrawer);
+document.getElementById('btn-carrito-header').addEventListener('click', abrirDrawer);
+
+/* ============================================================
+   7. MODAL CHECKOUT
+   ============================================================ */
+function abrirCheckout() {
+    if (carrito.length === 0) return;
+
+    const { combos, excE, excS, total } = calcularResumen();
+
+    // Parear entradas con segundos para el resumen
+    const entradasItems = carrito.filter(i => i.tipo === 'entrada');
+    const segundosItems = carrito.filter(i => i.tipo === 'segundo');
+
+    let lineas = [];
+
+    // Menús completos
+    for (let i = 0; i < combos; i++) {
+        const e = entradasItems[i];
+        const s = segundosItems[i];
+        const guard = (s.guarnicion && s.guarnicion !== '(Sin guarnición adicional)')
+            ? ` con guarnición de ${s.guarnicion}` : '';
+        lineas.push({
+            texto: `Menú Completo (Entrada: ${e.nombre} + Segundo: ${s.nombre}${guard})`,
+            precio: PRECIO_MENU
+        });
+    }
+    // Entradas excedentes
+    for (let i = combos; i < entradasItems.length; i++) {
+        lineas.push({ texto: `Entrada Sola: ${entradasItems[i].nombre}`, precio: PRECIO_ENTRADA });
+    }
+    // Segundos excedentes
+    for (let i = combos; i < segundosItems.length; i++) {
+        const s = segundosItems[i];
+        const guard = (s.guarnicion && s.guarnicion !== '(Sin guarnición adicional)')
+            ? ` con guarnición de ${s.guarnicion}` : '';
+        lineas.push({ texto: `Segundo Solo: ${s.nombre}${guard}`, precio: PRECIO_SEGUNDO });
+    }
+
+    // Render resumen en modal
+    const lista = document.getElementById('resumen-modal-lista');
+    lista.innerHTML = lineas.map(l =>
+        `<li>• ${l.texto} <strong>→ S/. ${l.precio.toFixed(2)}</strong></li>`
+    ).join('');
+    document.getElementById('resumen-modal-total').textContent =
+        `💰 TOTAL A PAGAR: S/. ${total.toFixed(2)}`;
+
+    // Guardar lineas para usar al enviar
+    document.getElementById('modal-checkout')._lineas = lineas;
+    document.getElementById('modal-checkout')._total   = total;
+
+    cerrarDrawer();
+    document.getElementById('modal-checkout').classList.add('abierto');
+    document.body.style.overflow = 'hidden';
+}
+
+function cerrarCheckout() {
+    document.getElementById('modal-checkout').classList.remove('abierto');
+    document.body.style.overflow = '';
+}
+
+document.getElementById('btn-ir-checkout').addEventListener('click', abrirCheckout);
+document.getElementById('btn-cerrar-checkout').addEventListener('click', cerrarCheckout);
+
+// Cerrar con clic fuera
+document.getElementById('modal-checkout').addEventListener('click', function(e) {
+    if (e.target === this) cerrarCheckout();
+});
+
+// Cerrar con ESC
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        cerrarCheckout();
+        cerrarDrawer();
+    }
+});
+
+/* ============================================================
+   8. ENVÍO POR WHATSAPP
+   ============================================================ */
+document.getElementById('btn-confirmar-wa').addEventListener('click', () => {
+    const nombre    = document.getElementById('input-nombre').value.trim();
+    const direccion = document.getElementById('input-direccion').value.trim();
+
+    if (!nombre) {
+        alert('Por favor ingresa tu nombre completo.');
+        document.getElementById('input-nombre').focus();
+        return;
+    }
+    if (!direccion) {
+        alert('Por favor ingresa tu dirección de entrega.');
+        document.getElementById('input-direccion').focus();
+        return;
+    }
+
+    const modal  = document.getElementById('modal-checkout');
+    const lineas = modal._lineas;
+    const total  = modal._total;
+
+    // Construir detalle del pedido
+    const detalle = lineas.map(l =>
+        `- 1x ${l.texto} -> S/. ${l.precio.toFixed(2)}`
+    ).join('\n');
+
+    const mensaje = `📌 *NUEVO PEDIDO - LA RAMADITA*
+👤 *Cliente:* ${nombre}
+📍 *Dirección:* ${direccion}
+---------------------------------------
+🛒 *DETALLE DEL PEDIDO:*
+${detalle}
+---------------------------------------
+💰 *TOTAL A PAGAR:* S/. ${total.toFixed(2)}
+📸 _[Adjuntar aquí la captura del comprobante de pago]_`;
+
+    const urlWA = `https://wa.me/51960166606?text=${encodeURIComponent(mensaje)}`;
+    window.open(urlWA, '_blank');
+
+    // Reset
+    carrito = [];
+    idCounter = 0;
+    actualizarUI();
+    cerrarCheckout();
+    document.getElementById('input-nombre').value    = '';
+    document.getElementById('input-direccion').value = '';
+});
+
+/* ============================================================
+   9. TABS ENTRADAS / SEGUNDOS
+   ============================================================ */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('activo'));
+        btn.classList.add('activo');
+
+        const tab = btn.dataset.tab;
+        document.getElementById('seccion-entradas').classList.toggle('visible', tab === 'entradas');
+        document.getElementById('seccion-segundos').classList.toggle('visible', tab === 'segundos');
+    });
+});
+
+/* ============================================================
+   10. INICIALIZAR
+   ============================================================ */
+renderizarMenus();
+</script>
+
+</body>
+</html>
