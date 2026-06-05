@@ -171,9 +171,22 @@ footer { background: #1f130e; color: #e6d5bd; text-align: center; padding: 1.8re
     flex-shrink: 0; display: flex; flex-direction: column;
     align-items: center; gap: 3px;
     padding: 9px 16px 11px; border: none;
-    background: transparent; cursor: default;
+    background: transparent; cursor: pointer;
     font-family: inherit; border-bottom: 3px solid transparent;
     transition: 0.2s; min-width: 88px;
+}
+.dia-tab.activo,
+.dia-tab.hoy {
+    border-bottom-color: var(--rojo);
+    background: rgba(134,44,27,0.04);
+}
+.dia-tab.activo .tab-nombre,
+.dia-tab.hoy .tab-nombre {
+    color: var(--rojo);
+}
+.dia-tab.activo .tab-fecha,
+.dia-tab.hoy .tab-fecha  {
+    color: var(--rojo); font-weight: 700;
 }
 .dia-tab .tab-nombre {
     font-size: 0.76rem; font-weight: 700;
@@ -186,7 +199,11 @@ footer { background: #1f130e; color: #e6d5bd; text-align: center; padding: 1.8re
 }
 .dia-tab.hoy .tab-nombre { color: var(--rojo); }
 .dia-tab.hoy .tab-fecha  { color: var(--rojo); font-weight: 700; }
-.dia-tab.bloqueado { opacity: 0.42; pointer-events: none; }
+.dia-tab.bloqueado {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
 .candado-icon { font-size: 0.63rem; color: #c0a080; margin-top: 1px; }
 
 /* ---- Contenido ---- */
